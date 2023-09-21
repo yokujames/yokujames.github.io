@@ -156,7 +156,7 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Partner</h2>
+            <h2>Partners</h2>
           </div>
         </div>
 
@@ -197,7 +197,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-8">
+          <div class="col-md-6">
             <!-- allert success -->
             <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
               <strong>Terima Kasih!</strong> Pesan sudah terkirim.
@@ -256,7 +256,17 @@
     </footer>
     <!-- akhir footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    //script menangkap form
+    <!-- gsapscript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.from(".jumbotron img", { duration: 1.5, delay: 0.2, y: -100, opacity: 0, ease: "bounce" });
+
+      gsap.to(".jumbotron p", { duration: 3, Text: "Na bhe ya emale, na bhe ya memale.", ease: "back" });
+    </script>
+
+    //script menangkap form sumber https://github.com/jamiewilson/form-to-google-sheets
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbxkXJ7_L2vgZ9xlvfrjEwJsCfSZYYHkB_sOcnXhx-jxfFLOvxE4MoexGZq1TF83poBW/exec";
       const form = document.forms["submit-to-google-sheet"];
